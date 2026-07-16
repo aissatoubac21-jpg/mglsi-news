@@ -1,0 +1,55 @@
+:root {
+    --accent-accueil: #4caf50;
+    --accent-categorie: #e91e63;
+}
+
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #222; }
+
+header { background-color: #000000; color: #ffffff; text-align: center; padding: 30px 0; font-size: 2.5em; font-family: 'Oswald', 'Arial Narrow', sans-serif; text-transform: uppercase; }
+
+nav { background-color: #000000; display: flex; justify-content: center; flex-wrap: wrap; border-top: 1px solid #333; border-bottom: 2px solid #000; }
+nav a { color: #ffffff; text-decoration: none; padding: 10px 15px; margin: 0 5px; font-weight: bold; border-bottom: 3px solid transparent; }
+nav a.accueil:hover, nav a.accueil.active { border-bottom-color: var(--accent-accueil); }
+nav a.categorie:hover, nav a.categorie.active { border-bottom-color: var(--accent-categorie); }
+
+.main-container { max-width: 900px; margin: 0 auto; padding: 20px; }
+.page-title { text-align: center; font-family: "Comic Sans MS", "Chalkboard SE", sans-serif; font-size: 2.2em; margin-bottom: 30px; color: #000; }
+
+/* Bouton d'ajout */
+.btn-new { display: inline-block; background-color: var(--accent-accueil); color: white; text-decoration: none; padding: 10px 22px; border-radius: 25px; font-weight: 600; margin-bottom: 25px; }
+.btn-new:hover { background-color: #388e3c; }
+
+/* Cartes de la liste d'articles */
+.card-article { background-color: #dcdcdc; border: 1px solid #999; border-radius: 15px; padding: 20px 25px; margin-bottom: 25px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); }
+.card-article h3 { margin-top: 0; color: #000; font-size: 1.5em; margin-bottom: 15px; }
+.card-article p { color: #333; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin: 0; text-align: justify; }
+.card-link { text-decoration: none; color: inherit; display: block; transition: transform 0.2s; }
+.card-link:hover { transform: translateY(-2px); }
+.no-data { text-align: center; color: #666; font-style: italic; padding: 40px; }
+
+/* Détail d'un article */
+.article-wrapper { background-color: #dcdcdc; border: 1px solid #999; border-radius: 15px; padding: 30px 35px; margin: 30px 0; }
+.article-title { color: #000; font-size: 1.8em; margin-top: 0; }
+.date-badge { color: #555; display: block; font-style: italic; margin-bottom: 20px; border-bottom: 1px solid #bbb; padding-bottom: 12px; }
+.article-body { line-height: 1.7; font-size: 1.05em; color: #222; text-align: justify; white-space: pre-line; }
+
+.article-actions { margin-top: 25px; padding-top: 18px; border-top: 1px solid #bbb; display: flex; gap: 12px; }
+.btn-edit, .btn-delete { border: none; padding: 10px 20px; border-radius: 20px; font-weight: 600; cursor: pointer; text-decoration: none; font-size: 0.95em; }
+.btn-edit { background-color: #ffc107; color: #212529; }
+.btn-edit:hover { background-color: #e0a800; }
+.btn-delete { background-color: #dc3545; color: white; }
+.btn-delete:hover { background-color: #b02a37; }
+
+/* Formulaire d'ajout / modification */
+.alerte-erreur { background: #f8d7da; color: #721c24; padding: 15px 20px; border-radius: 6px; margin-bottom: 20px; }
+.form-article { background-color: #f5f5f5; border: 1px solid #ccc; border-radius: 15px; padding: 30px; display: flex; flex-direction: column; }
+.form-article label { font-weight: 600; margin-top: 16px; margin-bottom: 6px; color: #212529; }
+.form-article input[type="text"], .form-article select, .form-article textarea {
+    padding: 10px 12px; border: 1px solid #999; border-radius: 8px; font-size: 1em; font-family: inherit;
+}
+.form-article textarea { resize: vertical; }
+.btn-submit {
+    margin-top: 25px; background-color: #000; color: white; border: none; padding: 12px 20px;
+    border-radius: 25px; font-size: 1em; font-weight: 600; cursor: pointer; transition: background 0.2s;
+}
+.btn-submit:hover { background-color: #333; }
